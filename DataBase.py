@@ -24,7 +24,7 @@ class Database:
     def input_data_in_database(self, subject):
         conn = sqlite3.connect("ProgressDataBase.db")
         cursor = conn.cursor()
-        self.progress = [(subject, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
+        self.progress = [(subject, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
 
         cursor.executemany()
 
