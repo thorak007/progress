@@ -1,6 +1,8 @@
 venv
-
 .idea
-
 __pycache__/
 *.db
+Test 2.py
+Test.py
+Test3.py
+tt.py
