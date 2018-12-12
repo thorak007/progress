@@ -42,6 +42,4 @@ for i in range(amount):
     subject = str(input('Subject 1: '))
     d.input_data_in_database(subject)
 
-
-
-
+# Step 5 - Select data from database
