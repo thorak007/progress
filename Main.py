@@ -1,6 +1,7 @@
 from Message import Message
 from Human import Human
 from Subjects import Subjects
+from DataBase import DataBase
 
 # Step 1 - Welcome
 m = Message()
@@ -34,9 +35,13 @@ for i in range(amount):
         amount = int(input('Amount: '))
 
 # Step 4 - Init of subjects
+d = DataBase()
+d.create_database()
 for i in range(amount):
     m.init_subjects(i)
     subject = str(input('Subject 1: '))
+    d.input_data_in_database(subject)
+
 
 
 

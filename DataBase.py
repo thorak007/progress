@@ -25,7 +25,7 @@ class DataBase:
         conn = sqlite3.connect("Subjects.db")
         cursor = conn.cursor()
         self.progress = [(subject, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
-        cursor.executemany("INSERT INTO Subjects VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", self.progress)
+        cursor.executemany("INSERT INTO Subjects VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", self.progress)
         conn.commit()
 
     def select_data_from_database(self):
