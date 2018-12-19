@@ -17,8 +17,17 @@ class Message:
 
     def message_1(self):
         time.sleep(2)
-        print("Input amount of subjects")
+        print("Input amount of subjects!")
 
     def init_subjects(self, amount):
         time.sleep(1)
-        print("Input name of Subject", amount+1)
+        print("Input name of Subject!", amount+1)
+
+    def invalid_login_password(self):
+        time.sleep(1)
+        print("Invalid login or password!")
+
+    def invalid_user(self):
+        time.sleep(1)
+        print("Or such user have already exist!")
+        time.sleep(1)
