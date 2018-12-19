@@ -20,9 +20,7 @@ class DataBase:
     def create_table_subjects(self):
         conn = sqlite3.connect("Progress.db")
         cursor = conn.cursor()
-        cursor.execute("""CREATE TABLE IF NOT EXISTS Subjects(subject TEXT, january INTEGER, february INTEGER, 
-                        march INTEGER, april INTEGER, may INTEGER, june INTEGER, july INTEGER august INTEGER,
-                        september INTEGER, october INTEGER, november INTEGER, december INTEGER)""")
+        cursor.execute("""CREATE TABLE IF NOT EXISTS Subjects(subject TEXT, )""")
         conn.commit()
 
     def input_data_in_table_user(self, login, password):
@@ -42,8 +40,8 @@ class DataBase:
     def input_data_in_database(self, subject):
         conn = sqlite3.connect("Progress.db")
         cursor = conn.cursor()
-        self.progress = [(subject, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
-        cursor.executemany("INSERT INTO Subjects VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", self.progress)
+        self.progress = [(subject, )]
+        cursor.executemany("INSERT INTO Subjects VALUES ()", self.progress)
         conn.commit()
 
     def select_login_from_table_user(self):
@@ -61,3 +59,9 @@ class DataBase:
         for row in cursor.execute("SELECT password FROM User"):
             a.append(row[0])
         return a
+
+    def select_data_from_table_subject(self):
+        conn = sqlite3.connect("Progress.db")
+        cursor = conn.cursor()
+        cursor.executemany()
+        conn.commit()
