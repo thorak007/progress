@@ -1,10 +1,13 @@
 class Subjects:
 
-    def __init__(self, amount):
-        self.amount = amount
+    def __init__(self, subject, month, mark):
+        self.subject = subject
+        self.month = month
+        self.mark = mark
 
-    def check_amount_of_subjects(self):
-        if self.amount >= 20:
-            return False
-        else:
-            return True
+    def input_marks_in_subjects(self):
+        marks = []
+        for i in range(12):
+            marks[i] = self.mark
+
+

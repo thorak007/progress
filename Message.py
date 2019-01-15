@@ -1,4 +1,6 @@
 import time
+
+
 class Message:
     def welcome(self):
         time.sleep(1)
@@ -15,13 +17,13 @@ class Message:
         time.sleep(1)
         print("Nice Joke! Try again!")
 
-    def message_1(self):
+    def input_data_to_database_by_user_1(self):
         time.sleep(2)
-        print("Input amount of subjects!")
+        print("Fill subjects with marks")
 
-    def init_subjects(self, amount):
-        time.sleep(1)
-        print("Input name of Subject!", amount+1)
+    def input_data_to_database_by_user_2(self):
+        time.sleep(2)
+        print("Input 's' or '-' in Subject to finish filling")
 
     def invalid_login_password(self):
         time.sleep(1)
